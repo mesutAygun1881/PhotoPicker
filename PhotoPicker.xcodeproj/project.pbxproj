@@ -11,6 +11,11 @@
 		7C5F2A5B29C111A0004488FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F2A5A29C111A0004488FF /* ContentView.swift */; };
 		7C5F2A5D29C111A1004488FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F2A5C29C111A1004488FF /* Assets.xcassets */; };
 		7C5F2A6029C111A1004488FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F2A5F29C111A1004488FF /* Preview Assets.xcassets */; };
+		7C5F2A6729C11412004488FF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F2A6629C11412004488FF /* ImagePicker.swift */; };
+		7C5F2A6929C11480004488FF /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F2A6829C11480004488FF /* UserViewModel.swift */; };
+		7C5F2A6B29C114F8004488FF /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F2A6A29C114F8004488FF /* ImageModel.swift */; };
+		7C5F2A6E29C11FF7004488FF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7C5F2A6D29C11FF7004488FF /* Alamofire */; };
+		7C5F2A7129C1206A004488FF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C5F2A7029C1206A004488FF /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,9 @@
 		7C5F2A5A29C111A0004488FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7C5F2A5C29C111A1004488FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C5F2A5F29C111A1004488FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7C5F2A6629C11412004488FF /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		7C5F2A6829C11480004488FF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		7C5F2A6A29C114F8004488FF /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5F2A7129C1206A004488FF /* SDWebImageSwiftUI in Frameworks */,
+				7C5F2A6E29C11FF7004488FF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +63,9 @@
 			children = (
 				7C5F2A5829C111A0004488FF /* PhotoPickerApp.swift */,
 				7C5F2A5A29C111A0004488FF /* ContentView.swift */,
+				7C5F2A6829C11480004488FF /* UserViewModel.swift */,
+				7C5F2A6629C11412004488FF /* ImagePicker.swift */,
+				7C5F2A6A29C114F8004488FF /* ImageModel.swift */,
 				7C5F2A5C29C111A1004488FF /* Assets.xcassets */,
 				7C5F2A5E29C111A1004488FF /* Preview Content */,
 			);
@@ -83,6 +96,10 @@
 			dependencies = (
 			);
 			name = PhotoPicker;
+			packageProductDependencies = (
+				7C5F2A6D29C11FF7004488FF /* Alamofire */,
+				7C5F2A7029C1206A004488FF /* SDWebImageSwiftUI */,
+			);
 			productName = PhotoPicker;
 			productReference = 7C5F2A5529C111A0004488FF /* PhotoPicker.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,10 @@
 				Base,
 			);
 			mainGroup = 7C5F2A4C29C111A0004488FF;
+			packageReferences = (
+				7C5F2A6C29C11FF7004488FF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7C5F2A6F29C1206A004488FF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 7C5F2A5629C111A0004488FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5F2A6729C11412004488FF /* ImagePicker.swift in Sources */,
+				7C5F2A6B29C114F8004488FF /* ImageModel.swift in Sources */,
+				7C5F2A6929C11480004488FF /* UserViewModel.swift in Sources */,
 				7C5F2A5B29C111A0004488FF /* ContentView.swift in Sources */,
 				7C5F2A5929C111A0004488FF /* PhotoPickerApp.swift in Sources */,
 			);
@@ -339,6 +363,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C5F2A6C29C11FF7004488FF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		7C5F2A6F29C1206A004488FF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C5F2A6D29C11FF7004488FF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C5F2A6C29C11FF7004488FF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7C5F2A7029C1206A004488FF /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C5F2A6F29C1206A004488FF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C5F2A4D29C111A0004488FF /* Project object */;
 }
